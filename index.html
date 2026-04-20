@@ -139,7 +139,7 @@ function checkPassword() {
     let correct = localStorage.getItem("sitePass");
 
     if (input === correct) {
-        window.location.href = localStorage.getItem("siteLink");
+        window.location.href = localStorage.getItem("siteLink") + "?t=" + Date.now();
     } else {
         document.getElementById("error").innerText = "Sai mật khẩu!";
     }
