@@ -138,11 +138,13 @@ function checkPassword() {
     let input = document.getElementById("password").value;
     let correct = localStorage.getItem("sitePass");
 
-    if (input === correct) {
-        window.location.href = localStorage.getItem("siteLink") + "?t=" + Date.now();
-    } else {
-        document.getElementById("error").innerText = "Sai mật khẩu!";
-    }
+if (input === correct) {
+    let url = localStorage.getItem("siteLink");
+    url += (url.includes("?") ? "&" : "?") + "t=" + Date.now();
+    window.location.href = url;
+} else {
+    document.getElementById("error").innerText = "Sai mật khẩu!";
+}
 }
 
 // ===== ADMIN FLOW =====
