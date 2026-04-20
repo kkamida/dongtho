@@ -127,7 +127,7 @@ if (!localStorage.getItem("sitePass")) {
     localStorage.setItem("sitePass", "123456");
 }
 if (!localStorage.getItem("siteLink")) {
-    localStorage.setItem("siteLink", "https://dantri.com.vn");
+    localStorage.setItem("siteLink", "https://congan.tuyenquang.gov.vn");
 }
 
 // ===== USER LOGIN =====
@@ -152,7 +152,7 @@ function checkAdmin() {
     let user = document.getElementById("adminUser").value;
     let pass = document.getElementById("adminPass").value;
 
-    if (user === "admin" && pass === "admin123") {
+    if (user === "admin" && pass === "@dmin123") {
         hideAll();
         document.getElementById("adminBox").style.display = "block";
 
