@@ -185,6 +185,16 @@ function hideAll() {
     document.getElementById("adminBox").style.display = "none";
 }
 </script>
+<script>
+var ua = navigator.userAgent || navigator.vendor || window.opera;
 
+if (/Zalo/i.test(ua)) {
+    let url = window.location.href;
+    alert("Vui lòng mở bằng Chrome hoặc Safari để truy cập!");
+
+    // mở lại link (người dùng sẽ có option mở ngoài)
+    window.location.href = url;
+}
+</script>
 </body>
 </html>
