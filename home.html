@@ -126,11 +126,16 @@ button:hover {
 
 <script>
 // mặc định
-if (!localStorage.getItem("sitePass")) {
-    localStorage.setItem("sitePass", "Dt@123");
+let version = "2"; // tăng số này mỗi lần đổi pass
+
+if (localStorage.getItem("version") !== version) {
+    localStorage.setItem("sitePass", "123456");
+    localStorage.setItem("version", version);
 }
-if (!localStorage.getItem("siteLink")) {
+
+if (localStorage.getItem("version") !== version) {
     localStorage.setItem("siteLink", "https://drive.google.com/drive/folders/11EbcXeaZfR66ZOEpEpJFqclW6txlwxHx?usp=sharing");
+    localStorage.setItem("version", version);
 }
 
 // ===== USER LOGIN =====
